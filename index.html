@@ -5,17 +5,17 @@
 <body>
 <h2>랜덤 주재형 제조기</h2>
 
-<textarea id="input" rows="6" cols="30">주재형</textarea>
+<textarea id="input" rows="6" cols="50">주재형</textarea>
 
 <br>
 
-<p>제조개수 <input type="number" id="amount" min="1" max="300" value="30"></p>
+<p>제조개수 <input type="number" id="amount" min="1" max="300" value="50"></p>
 
 <button type="button" onclick='onClick()'>주재형 제조하기</button>
  
 <br><br>
 
-<textarea id="output" rows="6" cols="30" readonly>...</textarea>
+<textarea id="output" rows="10" cols="50" readonly>...</textarea>
 
 <script>
 	var names = [];
@@ -49,7 +49,7 @@
 		click += 1; 
 		if (click >= 10) {
 			alert("너무 많이 누르지 마세요\n"); 
-			alert("한 번만 봐드립니다\n");
+			alert("이번만 봐드립니다\n");
 		}
 	}
 	
