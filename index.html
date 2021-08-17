@@ -11,7 +11,7 @@
 
 <p>제조개수 <input type="number" id="amount" min="1" max="300" value="30"></p>
 
-<button type="button" onclick='names = document.getElementById("input").value.split(""); document.getElementById("output").innerHTML = bulkJJ(document.getElementById("amount").value, 2)'>Click Me!</button>
+<button type="button" onclick='onClick()'>Click Me!</button>
  
 <br><br>
 
@@ -19,11 +19,12 @@
 
 <script>
 	var names = [];
+	var click = 0;
 	
 	function makeJJ(length) {
 		let name = '';
 		  for(let i = 1; i <= length; i++) {  
-			name += names[Math.floor(Math.random()*3)];
+			name += names[Math.floor(Math.random()*names.length)];
 		  }
 		  return name;
 	}
@@ -39,6 +40,16 @@
 			}
 		  }
 		  return name;
+	}
+
+	function onClick() {
+		names = document.getElementById("input").value.split(""); 
+		document.getElementById("output").innerHTML = bulkJJ(document.getElementById("amount").value, 2); 
+		
+		click += 1; 
+		if (click >= 10) {
+			alert("너무 많이 누르지 마세요\n한 번만 봐드립니다\n")
+		}
 	}
 	
 	</script>
