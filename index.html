@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html>
+<title>JJ</title>
+<meta charset = "utf-8">
 <body>
 <h2>랜덤 주재형 제조기</h2>
 
-<pre id="demo" style="font-size: 16px;">여기에 주재형 출력</pre>
+<textarea id="input" rows="6" cols="30">주재형</textarea>
 
-<script>
-const names = ["주", "재", "형"];
-
-function makeJJ(length) {
-	let name = '';
-  	for(let i = 1; i <= length; i++) {  
-		name += names[Math.floor(Math.random()*3)];
-  	}
-  	return name;
-}
-
-function bulkJJ(amount, length) {
-  	let name = '';
-
-  	for (let i = 1; i <= amount; i++) {
-    	name += makeJJ(length) + ' ';
-
-    	if (i % 10 == 0) {
-      	name += '\n';
-    	}
-  	}
-  	return name;
-}
-</script>
+<br>
 
 <p>제조개수 <input type="number" id="amount" min="1" max="300" value="30"></p>
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = bulkNyehuing(document.getElementById("amount").value, 2)'>Click Me!</button>
-<button type="button" onclick='document.getElementById("demo").innerHTML = bulkNyehuing(document.getElementById("amount").value, 3)'>세글자</button>  
-<button type="button" onclick='document.getElementById("demo").innerHTML = bulkNyehuing(document.getElementById("amount").value, 6)'>더욱 긴 주재형</button>
+<button type="button" onclick='names = document.getElementById("input").value.split(""); document.getElementById("output").innerHTML = bulkJJ(document.getElementById("amount").value, 2)'>Click Me!</button>
+ 
+<br><br>
 
+<textarea id="output" rows="6" cols="30" readonly>...</textarea>
+
+<script>
+	var names = [];
+	
+	function makeJJ(length) {
+		let name = '';
+		  for(let i = 1; i <= length; i++) {  
+			name += names[Math.floor(Math.random()*3)];
+		  }
+		  return name;
+	}
+	
+	function bulkJJ(amount, length) {
+		  let name = '';
+	
+		  for (let i = 1; i <= amount; i++) {
+			name += makeJJ(length) + ' ';
+	
+			if (i % 10 == 0) {
+			  name += '\n';
+			}
+		  }
+		  return name;
+	}
+	
+	</script>
 </body>
 </html>
