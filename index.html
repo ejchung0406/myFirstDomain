@@ -8,7 +8,7 @@
 <script>
 const names = ["주", "재", "형"];
 
-function MakeNyehuing(length) {
+function makeJJ(length) {
 	let name = '';
   	for(let i = 1; i <= length; i++) {  
 		name += names[Math.floor(Math.random()*3)];
@@ -16,11 +16,11 @@ function MakeNyehuing(length) {
   	return name;
 }
 
-function bulkNyehuing(amount, length) {
+function bulkJJ(amount, length) {
   	let name = '';
 
   	for (let i = 1; i <= amount; i++) {
-    	name += MakeNyehuing(length) + ' ';
+    	name += makeJJ(length) + ' ';
 
     	if (i % 10 == 0) {
       	name += '\n';
