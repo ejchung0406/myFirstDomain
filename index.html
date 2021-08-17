@@ -43,12 +43,13 @@
 	}
 
 	function onClick() {
-		names = document.getElementById("input").value.split("").replace(/\s/g, '');
+		names = document.getElementById("input").value.replace(/\s/g, '').split("");
 		document.getElementById("output").innerHTML = bulkJJ(document.getElementById("amount").value, 2); 
 		
 		click += 1; 
 		if (click >= 10) {
-			alert("너무 많이 누르지 마세요\n한 번만 봐드립니다\n")
+			alert("너무 많이 누르지 마세요\n"); 
+			alert("한 번만 봐드립니다\n");
 		}
 	}
 	
