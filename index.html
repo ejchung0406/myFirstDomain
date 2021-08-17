@@ -43,7 +43,7 @@
 	}
 
 	function onClick() {
-		names = document.getElementById("input").value.split(""); 
+		names = document.getElementById("input").value.split("").replace(/\s/g, '');
 		document.getElementById("output").innerHTML = bulkJJ(document.getElementById("amount").value, 2); 
 		
 		click += 1; 
